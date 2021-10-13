@@ -166,10 +166,11 @@ dependencies = [
 
 [[package]]
 name = "localdeploy"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "clap",
  "git2",
+ "rpassword",
 ]
 
 [[package]]
@@ -217,6 +218,16 @@ name = "pkg-config"
 version = "0.3.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7c9b1041b4387893b91ee6746cddfc28516aff326a3519fb2adf820932c5e6cb"
+
+[[package]]
+name = "rpassword"
+version = "5.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ffc936cf8a7ea60c58f030fd36a612a48f440610214dc54bc36431f9ea0c3efb"
+dependencies = [
+ "libc",
+ "winapi",
+]
 
 [[package]]
 name = "strsim"

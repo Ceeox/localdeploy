@@ -11,6 +11,8 @@ pub enum Error {
     MissingCommand,
     EnvError(VarError),
     IoError(IoError),
+    MissingPath,
+    MissingUrlToRepo,
 }
 
 impl Display for Error {
@@ -20,6 +22,8 @@ impl Display for Error {
             Error::MissingCommand => write!(f, "Missing command"),
             Error::EnvError(err) => write!(f, "Missing env var: {}", err),
             Error::IoError(err) => write!(f, "io error occured: {}", err),
+            Error::MissingPath => write!(f, "missing path to repo"),
+            Error::MissingUrlToRepo => write!(f, "missing url to repo"),
         }
     }
 }
